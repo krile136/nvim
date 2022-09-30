@@ -1,0 +1,61 @@
+# ディレクトリのツリー表示をできるようにする
+[[plugins]]
+repo = 'preservim/nerdtree'
+hook_add = '''
+  source /Users/matsuokahiroyuki/.config/nvim/plugins/nerdtree.vim
+'''
+
+# ページ下部のステータスなどをかっこよく表示
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+hook_add = '''
+  source /Users/matsuokahiroyuki/.config/nvim/plugins/vim-airline-themes.vim
+'''
+
+# ノーマルモードのときに gcc でコメントアウト
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+# ファイルアイコンを表示
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+# ファイル検索ができるようにする
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_add = '''
+  source /Users/matsuokahiroyuki/.config/nvim/plugins/denite.vim
+'''
+
+# onedarkのカラースキーム
+[[plugins]]
+repo = 'joshdick/onedark.vim'
+
+# 自動補完
+[[plugins]]
+repo = 'Shougo/ddc.vim'
+hook_add = '''
+  source /Users/matsuokahiroyuki/.config/nvim/plugins/ddc.vim
+'''
+
+#ddc.vimを動かすのにdenoとブリッジする
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+
+#周辺のワードを取得して候補に出してくれる
+[[plugins]]
+repo = 'Shougo/ddc-around'
+
+#打った文字から始まるキーワードに絞る
+[[plugins]]
+repo = 'Shougo/ddc-matcher_head'
+
+[[plugins]]
+repo = 'Shougo/ddc-nvim-lsp'
+
+[[plugins]]
+repo = 'Shougo/ddc-sorter_rank'
