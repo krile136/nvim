@@ -1,0 +1,11 @@
+[[plugins]]
+repo = 'neovim/nvim-lspconfig'
+on_event = 'BufEnter'
+hook_source= '''
+  source /Users/matsuokahiroyuki/.config/nvim/plugins/nvim-lspconfig.lua
+'''
+
+[[plugins]]
+repo = 'williamboman/nvim-lsp-installer'
+on_source = 'nvim-lspconfig'
+

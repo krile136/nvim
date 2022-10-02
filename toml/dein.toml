@@ -35,16 +35,19 @@ hook_add = '''
 [[plugins]]
 repo = 'joshdick/onedark.vim'
 
-# 自動補完
-[[plugins]]
-repo = 'Shougo/ddc.vim'
-hook_add = '''
-  source /Users/matsuokahiroyuki/.config/nvim/plugins/ddc.vim
-'''
 
 #ddc.vimを動かすのにdenoとブリッジする
 [[plugins]]
 repo = 'vim-denops/denops.vim'
+
+# 自動補完
+[[plugins]]
+repo = 'Shougo/ddc.vim'
+on_event = 'InsertEnter'
+depends = ['denops.vim']
+hook_add = '''
+  source /Users/matsuokahiroyuki/.config/nvim/plugins/ddc.vim
+'''
 
 #周辺のワードを取得して候補に出してくれる
 [[plugins]]
@@ -54,8 +57,25 @@ repo = 'Shougo/ddc-around'
 [[plugins]]
 repo = 'Shougo/ddc-matcher_head'
 
+#Language Server Protocolを使用するのに必要
 [[plugins]]
 repo = 'Shougo/ddc-nvim-lsp'
 
+#ddcの並び順を整える
 [[plugins]]
 repo = 'Shougo/ddc-sorter_rank'
+
+#ddcの補完へのアクセスをカスタマイズできる
+[[plugins]]
+repo = 'Shougo/pum.vim' 
+
+# ファイル中のgit状態を表示
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+  let g:gitgutter_map_keys = 0
+  nmap ]c <Plug>(GitGutterNextHunk)
+  nmap [c <Plug>(GitGutterPrevHunk)
+'''
+
+

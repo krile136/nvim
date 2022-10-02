@@ -1,4 +1,5 @@
 " 使いたいsourceを指定する
+call ddc#custom#patch_global('completionMenu', 'pum.vim')
 call ddc#custom#patch_global('sources', ['nvim-lsp', 'around'])
 
 call ddc#custom#patch_global('sourceOptions', {
@@ -20,4 +21,7 @@ call ddc#custom#patch_global('sourceParams', {
 " dcc.vimの機能を有効にする
 call ddc#enable()
 
+" タブで補完候補を選択できるようにする
+inoremap <Tab> <Cmd>call pum#map#insert_relative(+1)<CR>
+inoremap <S-Tab> <Cmd>call pum#map#insert_relative(-1)<CR>
 

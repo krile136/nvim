@@ -1,4 +1,4 @@
-nnoremap <silent> <C-e> :NERDTreeToggle<CR>
+nnoremap <silent> <C-e> :NERDTreeFind<CR>
 
 " 表示幅
 let g:NERDTreeWinSize=50

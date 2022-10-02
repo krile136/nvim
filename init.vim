@@ -86,19 +86,20 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/Users/matsuokahiroyuki/.config/nvim/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=/Users/matsuokahiroyuki/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin('/Users/matsuokahiroyuki/.config/nvim/dein')
+call dein#begin('/Users/matsuokahiroyuki/.cache/dein')
 
 " Let dein manage dein
 " Required:
-call dein#add('/Users/matsuokahiroyuki/.config/nvim/dein/repos/github.com/Shougo/dein.vim')
+call dein#add('/Users/matsuokahiroyuki/.cache/dein/repos/github.com/Shougo/dein.vim')
 
 " Add or remove your plugins here like this:
 "call dein#add('Shougo/neosnippet.vim')
 "call dein#add('Shougo/neosnippet-snippets')
 call dein#load_toml('/Users/matsuokahiroyuki/.config/nvim/toml/dein.toml', {'lazy': 0})
+call dein#load_toml('/Users/matsuokahiroyuki/.config/nvim/toml/dein_lazy.toml', {'lazy': 1})
 
 
 " Required:
