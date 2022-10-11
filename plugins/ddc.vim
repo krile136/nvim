@@ -21,7 +21,10 @@ call ddc#custom#patch_global('sourceParams', {
 " dcc.vimの機能を有効にする
 call ddc#enable()
 
-" タブで補完候補を選択できるようにする
-inoremap <Tab> <Cmd>call pum#map#insert_relative(+1)<CR>
-inoremap <S-Tab> <Cmd>call pum#map#insert_relative(-1)<CR>
+
+
+" control + i or jで補完候補を選択、control + l で選択
+inoremap <C-j> <Cmd>call pum#map#insert_relative(+1)<CR>
+inoremap <C-k> <Cmd>call pum#map#insert_relative(-1)<CR>
+inoremap <C-l> <Cmd>call pum#map#confirm()<CR>
 

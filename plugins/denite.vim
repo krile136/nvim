@@ -17,10 +17,10 @@ nnoremap <silent> [denite]r :<C-u>Denite -resume -buffer-name=search-buffer-deni
 
 
 "nnoremap <silent> <C-o> :<C-u>Denite file buffer file:new<CR>
-nnoremap <silent> <C-b> :<C-u>Denite buffer<CR>
+nnoremap <silent> <C-o> :<C-u>Denite buffer<CR>
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort
-        nnoremap <silent><buffer><expr> <C-b>
+        nnoremap <silent><buffer><expr> <C-o>
                 \ denite#do_map('quit')
         nnoremap <silent><buffer><expr> <Space>
                 \ denite#do_map('toggle_select').'j'

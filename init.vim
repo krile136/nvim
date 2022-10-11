@@ -1,3 +1,9 @@
+" <Leader>をスペースキーにアサイン
+let mapleader = "\<space>"
+
+" tabキー幅を2にする（デフォルトは8)
+:set tabstop=2
+
 " バックアップファイルを作らない
 set nobackup
 
@@ -118,3 +124,12 @@ endif
 
 " colorcheme must put aftr dein#end
 colorscheme onedark
+
+let g:comfortable_motion_no_default_key_mappings = 1
+nnoremap <silent> <C-d> :call comfortable_motion#flick(100)<CR>
+nnoremap <silent> <C-u> :call comfortable_motion#flick(-100)<CR>
+let g:comfortable_motion_interval = 1.0 
+let g:comfortable_motion_friction = 80.0
+let g:comfortable_motion_air_drag = 3.0
+
+
